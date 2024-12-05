@@ -1,227 +1,120 @@
 function m1() {
   let Y = document.getElementById("inputValue").value;
-  console.log(Y);
-  const K = +document.getElementById("inputValue2").value; 
-  console.log(K);
+  const K = +document.getElementById("inputValue2").value;
   switch (K) {
     case 1:
       switch (Y) {
-        case "s": Y = "g"; break;
-        case "j": Y = "q"; break;
-        case "q": Y = "s"; break;
-        case "g": Y = "j"; break;
-        default: Y = "Bunday tomon yo";
-      } break;
+        case "s":
+          Y = "g";
+          break;
+        case "j":
+          Y = "q";
+          break;
+        case "q":
+          Y = "s";
+          break;
+        case "g":
+          Y = "j";
+          break;
+        default:
+          Y = "Bunday tomon yo";
+      }
+      break;
     case 2:
       switch (Y) {
-        case "s": Y = "q"; break;
-        case "j": Y = "g"; break;
-        case "q": Y = "j"; break;
-        case "g": Y = "s"; break;
-        default: Y = "Bunday tomon yo";
+        case "s":
+          Y = "q";
+          break;
+        case "j":
+          Y = "g";
+          break;
+        case "q":
+          Y = "j";
+          break;
+        case "g":
+          Y = "s";
+          break;
+        default:
+          Y = "Bunday tomon yo";
       }
- break; default: Y = "Boshqa kamanda kiritingiz !";
+      break;
+    default:
+      Y = "Boshqa kamanda kiritingiz !";
   }
-  document.getElementById("output").innerHTML = `Kamanda bajarilgan holat: ${Y}`;
+  document.getElementById(
+    "output"
+  ).innerHTML = `Kamanda bajarilgan holat: ${Y}`;
 }
-
 function m2() {
-  const input = document.getElementById("inputValue2-1").value;
-  const input2 = document.getElementById("inputValue2-2").value;
-  const input3 = document.getElementById("inputValue2-3").value;
-  const number = parseInt(input);
-  const number2 = parseInt(input2);
-  const number3 = parseInt(input3);
-  const sum1 = number + number2;
-  const sum2 = number + number3;
-  const sum3 = number2 + number3;
-  if (sum1 >= sum2 && sum1 >= sum3) {
-    document.getElementById(
-      "output18"
-    ).innerHTML = `Eng katta yig‘indi: ${sum1}, sonlar: ${number} va ${number2}`;
-  } else if (sum2 >= sum1 && sum2 >= sum3) {
-    document.getElementById(
-      "output18"
-    ).innerHTML = `Eng katta yig‘indi: ${sum2}, sonlar: ${number} va ${number3}`;
-  } else {
-    document.getElementById(
-      "output18"
-    ).innerHTML = `Eng katta yig‘indi: ${sum3}, sonlar: ${number2} va ${number3}`;
-  }
+  const input = +document.getElementById("inputValue2-1").value;
+  let hajm = input ** 3;
+  let t_sirt = 6 * input ** 2;
+  document.getElementById(
+    "output2"
+  ).innerHTML = `Hajmi: ${hajm}, To'la sirt: ${t_sirt}`;
 }
-
-
 function m3() {
-  const input33 = document.getElementById("inputValue33").value;
-  const number33 = parseInt(input33);
-  let result = "";
-  if (isNaN(number33)) {
-    result = "Iltimos, son kiriting.";
-  } else if (number33 === 0) {
-    result = "Son 0 ga teng.";
-  } else if (number33 > 0 && number33 % 2 === 0) {
-    result = "Musbat juft son.";
-  } else if (number33 > 0 && number33 % 2 !== 0) {
-    result = "Musbat toq son.";
-  } else if (number33 < 0 && number33 % 2 === 0) {
-    result = "Manfiy juft son.";
-  } else if (number33 < 0 && number33 % 2 !== 0) {
-    result = "Manfiy toq son.";
+  const input33 = +document.getElementById("inputValue33").value;
+  const input33_2 = +document.getElementById("inputValue33_2").value;
+  if ((input33 + input33_2) % 2 === 0) {
+    document.getElementById(
+      "output3"
+    ).innerHTML = `Berilgan (x, y) maydon qora`;
+  } else {
+    document.getElementById("output3").innerHTML = `Berilgan (x, y) maydon oq`;
   }
-  document.getElementById("output3").innerHTML = `${result}`;
 }
 
 function m4() {
-  const input = document.getElementById("inputValue4").value;
-  const number = parseInt(input);
-  let result = "";
-  if (isNaN(number) || number < 1 || number > 999) {
-    result = "Iltimos, 1 dan 999 gacha bo'lgan son kiriting.";
+  const input41 = +document.getElementById("inputValue4").value;
+  const input42 = +document.getElementById("inputValue4-2").value;
+  const input43 = +document.getElementById("inputValue4-3").value;
+  let disB = Math.abs(input41 - input42);
+  let disC = Math.abs(input43 - input43);
+  if (disB <= disC) {
+    document.getElementById("output4").innerHTML = `B nuqta eng yaqini.`;
+  } else if (disB >= disC) {
+    document.getElementById("output4").innerHTML = `C nuqta eng yaqini.`;
   } else {
-    const yuzlik = Math.floor(number / 100);
-    const onlik = Math.floor((number % 100) / 10);
-    let birlik = number % 10;
-    switch (yuzlik) {
-      case 1:
-        result += "Bir yuz ";
-        break;
-      case 2:
-        result += "Ikki yuz ";
-        break;
-      case 3:
-        result += "Uch yuz ";
-        break;
-      case 4:
-        result += "To'rt yuz ";
-        break;
-      case 5:
-        result += "Besh yuz ";
-        break;
-      case 6:
-        result += "Olti yuz ";
-        break;
-      case 7:
-        result += "Yetti yuz ";
-        break;
-      case 8:
-        result += "Sakkiz yuz ";
-        break;
-      case 9:
-        result += "To'qqiz yuz ";
-        break;
-    }
-    if (onlik === 1) {
-      switch (birlik) {
-        case 0:
-          result += "O'n";
-          break;
-        case 1:
-          result += "O'n bir";
-          break;
-        case 2:
-          result += "O'n ikki";
-          break;
-        case 3:
-          result += "O'n uch";
-          break;
-        case 4:
-          result += "O'n to'rt";
-          break;
-        case 5:
-          result += "O'n besh";
-          break;
-        case 6:
-          result += "O'n olti";
-          break;
-        case 7:
-          result += "O'n yetti";
-          break;
-        case 8:
-          result += "O'n sakkiz";
-          break;
-        case 9:
-          result += "O'n to'qqiz";
-          break;
-      }
-    } else {
-      switch (onlik) {
-        case 2:
-          result += "Yigirma ";
-          break;
-        case 3:
-          result += "O'ttiz ";
-          break;
-        case 4:
-          result += "Qirq ";
-          break;
-        case 5:
-          result += "Ellik ";
-          break;
-        case 6:
-          result += "Oltmish ";
-          break;
-        case 7:
-          result += "Yetmish ";
-          break;
-        case 8:
-          result += "Sakson ";
-          break;
-        case 9:
-          result += "To'qson ";
-          break;
-      }
-      switch (birlik) {
-        case 1:
-          result += "bir";
-          break;
-        case 2:
-          result += "ikki";
-          break;
-        case 3:
-          result += "uch";
-          break;
-        case 4:
-          result += "to'rt";
-          break;
-        case 5:
-          result += "besh";
-          break;
-        case 6:
-          result += "olti";
-          break;
-        case 7:
-          result += "yetti";
-          break;
-        case 8:
-          result += "sakkiz";
-          break;
-        case 9:
-          result += "to'qqiz";
-          break;
-      }
-    }
+    document.getElementById(
+      "output4"
+    ).innerHTML = `B va C nuqta yaqinligi birxil.`;
   }
-  document.getElementById("output4").innerHTML = `<p>${result}</p>`;
 }
 
+
+
+
 function m5() {
-  const input5 = document.getElementById("inputValue5").value;
-  const num = parseInt(input5);
-  switch (num) {
-    case 1 || 3 || 5 || 7 || 8 || 10 || 12:
-      document.getElementById("output5").innerHTML = "Bu oy 31 kun.";
-      break;
-    case 2:
-      document.getElementById("output5").innerHTML =
-        "Bu oy 28 kun (kabisa yilida 29 kun).";
-      break;
-    case 4 || 6 || 9 || 11:
-      document.getElementById("output5").innerHTML = "Bu oy 30 kun.";
-      break;
-    default:
-      document.getElementById("output5").innerHTML = "Bunday oy yoq";
+  const x1 = +document.getElementById("inputValue5-1").value;
+  const y1 = +document.getElementById("inputValue5-2").value;
+  const x2 = +document.getElementById("inputValue5-3").value;
+  const y2 = +document.getElementById("inputValue5-4").value;
+  const x3 = +document.getElementById("inputValue5-5").value;
+  const y3 = +document.getElementById("inputValue5-6").value;
+  let x4;
+  let y4;
+  if (x1 === x2) {
+    x4 = x3;
+  } else if (x1 === x3) {
+    x4 = x2;
+  } else {
+    x4 = x1;
   }
+  if (y1 === y2) {
+    y4 = y3;
+  } else if (y1 === y3) {
+    y4 = y2;
+  } else {
+    y4 = y1;
+  }
+  document.getElementById("output5").innerHTML = `To'rtinchi nuqta: (${x4}, ${y4})`;
+  console.log({ x4, y4 });
 }
+
+
+
+
 
 function m6() {
   const input_61 = document.getElementById("inputValue6_1").value;

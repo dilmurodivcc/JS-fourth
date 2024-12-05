@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-bg-color: #000000;
+  --primary-bg-color: #3f3f3f;
   --secondary-bg-color: #4c4c4c;
   --highlight-color: #f0db4f;
   --button-bg-gradient: linear-gradient(60deg, #f0db4f, #c7b002, #f0db4f);
@@ -108,16 +108,9 @@ body {
   font-family: "Titillium Web", sans-serif;
   color: var(--text-color);
   text-align: center;
-  background-color: var(--secondary-bg-color);
-  /* transition: all 0.5s ease-in-out;
-  animation: gradientAnimation 8s infinite;
-  background: linear-gradient(
-    45deg,
-    var(--primary-bg-color),
-    var(--secondary-bg-color),
-    var(--primary-bg-color)
-  );
-  background-size: 400% 400%; */
+  background-color: var(--primary-bg-color);
+
+
   overflow-x: hidden;
 }
 .container {
