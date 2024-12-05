@@ -64,7 +64,6 @@ function m3() {
     document.getElementById("output3").innerHTML = `Berilgan (x, y) maydon oq`;
   }
 }
-
 function m4() {
   const input41 = +document.getElementById("inputValue4").value;
   const input42 = +document.getElementById("inputValue4-2").value;
@@ -81,9 +80,6 @@ function m4() {
     ).innerHTML = `B va C nuqta yaqinligi birxil.`;
   }
 }
-
-
-
 
 function m5() {
   const x1 = +document.getElementById("inputValue5-1").value;
@@ -108,39 +104,90 @@ function m5() {
   } else {
     y4 = y1;
   }
-  document.getElementById("output5").innerHTML = `To'rtinchi nuqta: (${x4}, ${y4})`;
+  document.getElementById(
+    "output5"
+  ).innerHTML = `To'rtinchi nuqta: (${x4}, ${y4})`;
   console.log({ x4, y4 });
 }
 
-
-
-
-
 function m6() {
-  const input_61 = document.getElementById("inputValue6_1").value;
-  const input_62 = document.getElementById("inputValue6_2").value;
-  const Y = input_61.trim().toUpperCase();
-  const K = parseInt(input_62);
-  let finalPosition = Y;
-  if (K === 1) {
-    if (Y === "S") finalPosition = "g";
-    else if (Y === "q") finalPosition = "S";
-    else if (Y === "J") finalPosition = "q";
-    else if (Y === "g") finalPosition = "J";
-  } else if (K === 2) {
-    if (Y === "S") finalPosition = "q";
-    else if (Y === "q") finalPosition = "J";
-    else if (Y === "J") finalPosition = "g";
-    else if (Y === "g") finalPosition = "S";
-  } else if (K === 0) {
-    finalPosition = Y;
-  } else {
-    finalPosition = "Noma'lum komanda";
+  const input_61 = +document.getElementById("inputValue6_1").value;
+  const input_62 = +document.getElementById("inputValue6_2").value;
+  const amal = +document.getElementById("inputValue6_3").value;
+  switch (amal) {
+    case 1:
+      document.getElementById("output6").innerHTML = `A + B = ${
+        input_61 + input_62
+      }`;
+      break;
+    case 2:
+      document.getElementById("output6").innerHTML = `A - B = ${
+        input_61 - input_62
+      }`;
+      break;
+    case 3:
+      document.getElementById("output6").innerHTML = `A / B = ${
+        input_61 / input_62
+      }`;
+      break;
+    case 4:
+      document.getElementById("output6").innerHTML = `A * B = ${
+        input_61 * input_62
+      }`;
+      break;
+    default:
+      document.getElementById(
+        "output6"
+      ).innerHTML = `Bunday amal mavjud emas !`;
+  }
+}
+
+function m7() {
+  const input_71 = +document.getElementById("inputValue7_1").value;
+  const value = +document.getElementById("inputValue7_2").value;
+  const p = 3.14;
+  let R;
+  let D;
+  let U;
+  let S;
+  switch (input_71) {
+    case 1:
+      R = value;
+      D = 2 * R;
+      U = 2 * p * R;
+      S = p * R * R;
+      break;
+    case 2:
+      D = value;
+      R = D / 2;
+      U = 2 * p * R;
+      S = p * R * R;
+      break;
+    case 3:
+      U = value;
+      R = L / (2 * p);
+      D = 2 * R;
+      S = p * R * R;
+      break;
+    case 4:
+      S = value;
+      R = Math.sqrt(S / p);
+      D = 2 * R;
+      U = 2 * p * R;
+      break;
+    default:
+      document.getElementById(
+        "output7"
+      ).innerHTML = `Bunday amal mavjud emas !`;
+      return;
   }
   document.getElementById(
-    "output6"
-  ).innerHTML = `Final yo'nalish: ${finalPosition}`;
+    "output7"
+  ).innerHTML = `Radius = ${R}, Diametr = ${D}, Uzunlik = ${U}, Doiraning uzasi = ${S}`;
 }
+
+
+
 
 // SOME FUNCTION -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
