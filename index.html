@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithms</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="./icons/javascript-logo-0.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img style="width: 40px" src="./icons/javascript-logo-0.png" alt="" />
+        <p>algorithms.</p>
+      </div>
+      <div class="navbar">
+        <nav>
+          <a href="#first">First</a>
+          <a href="#second">Second</a>
+          <a href="#third">Third</a>
+          <a href="#fivth">Fivth</a>
+          <a href="#sixth">Sixth</a>
+        </nav>
+        <div class="btns button-85">
+          <a
+            target="_blank"
+            href="https://github.com/dilmurodivcc/JS-third.git"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+
+          <i style="cursor: pointer" class="fa-solid fa-moon moon-icon"></i>
+        </div>
+      </div>
+    </header>
+    <h1>Algorithms by Abdulloh Sodiqov</h1>
+    <div class="container">
+      <section id="first">
+        <div id="content">
+          <h2 class="limited-line">
+            <span >6-masala.</span> Robot faqat 4 ta tomonga ko‘cha oladi.
+            (“S”-shimol, “J”-janub, “q”-sharq, “g”-g‘arb) va uchta raqamli
+            komanda: 0-harakatni davom ettir, 1-chapga buril, 2-o‘ngga buril.
+            Y-robot yo‘nalishi va K komanda berilgan. Berilgan komandani bajarib
+            bo‘lgandan so‘ng robot holatini aniqlovchi dastur tuzing.
+          </h2>
+          <br />
+          <input id="inputValue" type="text" placeholder="Y (s, q, j, g)" />
+          <input id="inputValue2" type="number" placeholder="K (0, 1, 2)" />
+          <button class="button-85" role="button" onclick="m1()">
+            Hisoblash
+          </button>
+          <div class="output" id="output"><p>Output</p></div>
+        </div>
+        <img
+          class="code"
+          style="
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          "
+          src="./images/Screenshot_1.png"
+          alt=""
+        />
+      </section>
+      <section id="second">
+        <div id="content">
+          <h2>
+            <span>2-masala</span> 3 ta sondan o‘zaro yig‘indisi eng katta
+            bo‘ladigan 2 tasini aniqlaydigan dastur tuzilsin.
+          </h2>
+          <br />
+          <input
+            id="inputValue2-1"
+            class="first-input"
+            type="number"
+            placeholder="Birinchi son"
+          />
+          <input
+            id="inputValue2-2"
+            class="second-input"
+            type="number"
+            placeholder="Ikkinchi son"
+          />
+          <input
+            id="inputValue2-3"
+            class="second-input"
+            type="number"
+            placeholder="Uchinchi son"
+          />
+          <button class="button-85" role="button" onclick="m2()">
+            Hisoblash
+          </button>
+          <div class="output" id="output18"><p>Output</p></div>
+        </div>
+        <img
+          class="code"
+          style="
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          "
+          src="./images/Screenshot_2.png"
+          alt=""
+        />
+      </section>
+      <section id="third">
+        <div id="content">
+          <h2>
+            <span>3-masala.</span>Butun son berilgan. Berilgan sonni “musbat toq
+            son”, “musbat juft son”, “manfiy toq son”, “manfiy juft son”, “son 0
+            ga teng” aniqlaydigan dastur tuzilsin.
+          </h2>
+          <br />
+          <input id="inputValue33" type="number" placeholder="Son kiriting" />
+
+          <button class="button-85" role="button" onclick="m3()">
+            Hisoblash
+          </button>
+
+          <div class="output" id="output3"><p>Output</p></div>
+        </div>
+        <img
+          class="code"
+          style="
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          "
+          src="./images/Screenshot_3.png"
+          alt=""
+        />
+      </section>
+      <section id="fourth">
+        <div id="content">
+          <h2>
+            <span>4-masala.</span> 1-999 oralig‘idagi son kiritiladi. Sonni
+            so‘zlar yordamida chiqaruvchi dastur yozing.
+          </h2>
+          <br />
+          <input
+            id="inputValue4"
+            type="number"
+            placeholder="Uch xonali son kiriting"
+            maxlength="3"
+          />
+          <button class="button-85" role="button" onclick="m4()">
+            Hisoblash
+          </button>
+          <div class="output" id="output4"><p>Output</p></div>
+        </div>
+        <img
+          class="code"
+          style="
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          "
+          src="./images/Screenshot_4.png"
+          alt=""
+        />
+      </section>
+      <section id="fivth">
+        <div id="content">
+          <h2>
+            <span>5-masala.</span>
+            Oy raqami berilgan, shu oyda nechta kun borligini aniqlovchi dastur
+            tuzing.
+          </h2>
+          <br />
+          <input
+            id="inputValue5"
+            type="number"
+            placeholder="Oy raqamini kiriting!"
+            maxlength="3"
+          />
+          <button class="button-85" role="button" onclick="m5()">
+            Hisoblash
+          </button>
+          <div class="output" id="output5"><p>Output</p></div>
+        </div>
+        <img
+          class="code"
+          style="
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          "
+          src="./images/Screenshot_5.png"
+          alt=""
+        />
+      </section>
+      <section id="sixth" style="margin-bottom: 100px;">
+        <div id="content">
+          <h2 class="limited-line">
+            <span >6-masala.</span> Robot faqat 4 ta tomonga ko‘cha oladi.
+            (“S”-shimol, “J”-janub, “q”-sharq, “g”-g‘arb) va uchta raqamli
+            komanda: 0-harakatni davom ettir, 1-chapga buril, 2-o‘ngga buril.
+            Y-robot yo‘nalishi va K komanda berilgan. Berilgan komandani bajarib
+            bo‘lgandan so‘ng robot holatini aniqlovchi dastur tuzing.
+          </h2>
+          <br />
+          <input
+            id="inputValue6_1"
+            placeholder="Boshlang'ich yo'nalish (S, q, J, g)"
+          />
+          <input id="inputValue6_2" placeholder="Komanda (0, 1, 2)" />
+          <button class="button-85" role="button" onclick="m6()">
+            Hisoblash
+          </button>
+          <div class="output" id="output6"><p>Output</p></div>
+        </div>
+        <img
+          class="code"
+          style="
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          "
+          src="./images/Screenshot_6.png"
+          alt=""
+        />
+      </section>
+    </div>
+    <!-- <section class="section section-1">
+      <h1 class="neon-title">Logic of algorithm</h1>
+      <div class="neon-box">
+        <p>
+         <span style="font-size: 25px; font-weight: bold; color: var(--highlight-color);"> 5-masala(FIZZBUZZ)</span><br />
+          <p style="text-align: start;">
+            Random A soni olinsin va quyidagi talablarni bajaring: <br />
+
+            1)A soni agar 5 ga bo'linса console da "A soni 5 ga bo'linadi!" degan
+            message chiqsin; <br />
+            2)A soni agar 3 ga bo'linса console da "A soni 3 ga bo'linadi!" degan
+            message chiqsin; <br />
+            3)A soni agar 3 va 5 ga bo'linса console da "A soni 3 va 5 ga
+            bo'linadi!" degan message chiqsin; <br />
+            4)A soni agar 3 va 5 ga bo'linmasa console da "A soni 3 va 5 ga
+            bo'linmaydi!" degan message chiqsin.
+          </p>
+
+        </p>
+      </div>
+      <div class="neon-box logic">
+        <p>
+
+          <span style="font-size: 18px; font-weight: bold; color: var(--highlight-color);"> Algorithm logigasi bu: </span>
+          <br />
+          Avvalo, A sonining 3 va 5 ga bo‘linishi tekshirilishi kerak. Agar bu shart bajarilmasa, dastur noto‘g‘ri ishlaydi va foydalanuvchi xato xabarini oladi. Shart tekshirilmasa, keyingi bosqichlarga o‘tishning imkoni bo‘lmaydi, chunki dastur noto‘g‘ri natija ko‘rsatishi mumkin. Ya'ni, 3 va 5 ga bo‘linish sharti dasturdagi asosiy qadamdir. Bu shart to‘g‘ri ishlamasa, boshqa amallar (masalan, xabar chiqarish) noto‘g‘ri bo‘ladi.
+        </p>
+
+        
+
+      </div>
+    </section> -->
+    <footer>
+      <div class="logo">
+        <img style="width: 40px" src="./icons/javascript-logo-0.png" alt="" />
+        <p>algorithms.</p>
+      </div>
+      <div style="margin-left: 10%" class="navbar">
+        <nav>
+          <a href="#first">First</a>
+          <a href="#second">Second</a>
+          <a href="#third">Third</a>
+          <a href="#fivth">Fivth</a>
+          <a href="#sixth">Sixth</a>        </nav>
+      </div>
+      <p>&copy; 2024 JavaScript Algorithms by Mr.Abdulloh.</p>
+    </footer>
+    <button id="backToTopBtn">
+      <i><i class="fa-solid fa-arrow-up"></i></i>
+    </button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
